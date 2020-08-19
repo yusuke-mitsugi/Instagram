@@ -187,6 +187,8 @@ class LoginViewController: UIViewController {
     }
     
     
+    
+    
     @objc private func didTapLoginButton() {
         usernameEmailField.resignFirstResponder()
         passwordField.resignFirstResponder()
@@ -194,7 +196,31 @@ class LoginViewController: UIViewController {
             let password = passwordField.text, !password.isEmpty, password.count >= 8 else {
                 return
         }
+        var username: String?
+        var email: String?
+        
+        if usernameEmail.contains("@"), usernameEmail.contains("@") {
+            email = usernameEmail
+        }
+        else {
+            username = usernameEmail
+        }
+        AuthManager.shared.loginUser(username: username, email: email, password: password) { (success) in
+            DispatchQueue.main.async {
+                if success {
+                    //ユーザーがログイン成功
+                    self.dismiss(animated: true, completion: nil)
+                }
+                else {
+                    //ログイン失敗
+                    let alert = UIAlertController(title: "ログインのエラー", message: "ログインできませんでした", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                    self.present(alert, animated: true)
+                }
+            }
+       }
     }
+    
     
     @objc private func didTapTermsButton() {
         guard let url = URL(string: "https://www.facebook.com/help/instagram/581066165581870") else {
@@ -216,7 +242,8 @@ class LoginViewController: UIViewController {
     
     @objc private func didTapCreateAccountButton() {
         let vc = RegisterViewController()
-        present(vc, animated: true)
+        vc.title = "アカウント登録"
+        present(UINavigationController(rootViewController: vc), animated: true)
     }
 }
 
