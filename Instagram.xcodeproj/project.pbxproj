@@ -33,6 +33,10 @@
 		B1E30ED624EA522500EEEBE9 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E30ED524EA522500EEEBE9 /* StorageManager.swift */; };
 		B1E30ED824EB71EF00EEEBE9 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E30ED724EB71EF00EEEBE9 /* Extentions.swift */; };
 		B1E30EDA24EB738100EEEBE9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1E30ED924EB738100EEEBE9 /* GoogleService-Info.plist */; };
+		B1E30EDD24EF86E900EEEBE9 /* IGFeedPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E30EDC24EF86E900EEEBE9 /* IGFeedPostTableViewCell.swift */; };
+		B1E30EE024EF890B00EEEBE9 /* IGFeddPostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E30EDF24EF890B00EEEBE9 /* IGFeddPostHeaderTableViewCell.swift */; };
+		B1E30EE224EF895800EEEBE9 /* IGFeedPostActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E30EE124EF895800EEEBE9 /* IGFeedPostActionsTableViewCell.swift */; };
+		B1E30EE424EF89B600EEEBE9 /* IDFeedPostGeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E30EE324EF89B600EEEBE9 /* IDFeedPostGeneralTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +69,10 @@
 		B1E30ED524EA522500EEEBE9 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		B1E30ED724EB71EF00EEEBE9 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		B1E30ED924EB738100EEEBE9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B1E30EDC24EF86E900EEEBE9 /* IGFeedPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostTableViewCell.swift; sourceTree = "<group>"; };
+		B1E30EDF24EF890B00EEEBE9 /* IGFeddPostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeddPostHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		B1E30EE124EF895800EEEBE9 /* IGFeedPostActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostActionsTableViewCell.swift; sourceTree = "<group>"; };
+		B1E30EE324EF89B600EEEBE9 /* IDFeedPostGeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDFeedPostGeneralTableViewCell.swift; sourceTree = "<group>"; };
 		F59E6685D96A1BD12298F6B7 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +138,7 @@
 		B195857D24E9265E005E6AF8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1E30EDB24EF86B300EEEBE9 /* Cells */,
 				B195857124E92627005E6AF8 /* Assets.xcassets */,
 				B195858024E926F3005E6AF8 /* Storyboads */,
 			);
@@ -209,6 +218,25 @@
 				B195859E24E92C74005E6AF8 /* PublishPostViewController.swift */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		B1E30EDB24EF86B300EEEBE9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B1E30EDE24EF88BE00EEEBE9 /* Home Feed */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B1E30EDE24EF88BE00EEEBE9 /* Home Feed */ = {
+			isa = PBXGroup;
+			children = (
+				B1E30EDF24EF890B00EEEBE9 /* IGFeddPostHeaderTableViewCell.swift */,
+				B1E30EDC24EF86E900EEEBE9 /* IGFeedPostTableViewCell.swift */,
+				B1E30EE124EF895800EEEBE9 /* IGFeedPostActionsTableViewCell.swift */,
+				B1E30EE324EF89B600EEEBE9 /* IDFeedPostGeneralTableViewCell.swift */,
+			);
+			path = "Home Feed";
 			sourceTree = "<group>";
 		};
 		CACBEEFE2530224523A06FC2 /* Pods */ = {
@@ -339,6 +367,7 @@
 				B195859324E92A99005E6AF8 /* EditProfileViewController.swift in Sources */,
 				B195858E24E92A07005E6AF8 /* RegisterViewController.swift in Sources */,
 				B195859F24E92C74005E6AF8 /* PublishPostViewController.swift in Sources */,
+				B1E30EE024EF890B00EEEBE9 /* IGFeddPostHeaderTableViewCell.swift in Sources */,
 				B195858224E928C0005E6AF8 /* ExploreViewController.swift in Sources */,
 				B195858424E92900005E6AF8 /* CameraViewController.swift in Sources */,
 				B195856D24E92626005E6AF8 /* HomeViewController.swift in Sources */,
@@ -347,14 +376,17 @@
 				B1E30ED224EA432400EEEBE9 /* DatabaseManager.swift in Sources */,
 				B195858624E92915005E6AF8 /* NotificationsViewController.swift in Sources */,
 				B195859B24E92BAC005E6AF8 /* SearchResultViewController.swift in Sources */,
+				B1E30EDD24EF86E900EEEBE9 /* IGFeedPostTableViewCell.swift in Sources */,
 				B195858C24E929FA005E6AF8 /* LoginViewController.swift in Sources */,
 				B195859924E92B76005E6AF8 /* SearchViewController.swift in Sources */,
 				B195858824E92933005E6AF8 /* ProfileViewController.swift in Sources */,
+				B1E30EE424EF89B600EEEBE9 /* IDFeedPostGeneralTableViewCell.swift in Sources */,
 				B1E30ED424EA445900EEEBE9 /* AuthManager.swift in Sources */,
 				B195856924E92626005E6AF8 /* AppDelegate.swift in Sources */,
 				B195856B24E92626005E6AF8 /* SceneDelegate.swift in Sources */,
 				B195859724E92B08005E6AF8 /* ListViewController.swift in Sources */,
 				B195859524E92ADE005E6AF8 /* SettingsViewController.swift in Sources */,
+				B1E30EE224EF895800EEEBE9 /* IGFeedPostActionsTableViewCell.swift in Sources */,
 				B1E30ED624EA522500EEEBE9 /* StorageManager.swift in Sources */,
 				B1E30ED824EB71EF00EEEBE9 /* Extentions.swift in Sources */,
 			);
